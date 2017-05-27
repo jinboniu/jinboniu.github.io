@@ -1,0 +1,618 @@
+/* ------------   Pubile  --------------- */
+body {
+	font: 300 14px/1.8 'Raleway', sans-serif;
+	color: #666;
+	overflow-x: hidden;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: #E7746F;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #999;
+}
+h1, h2, h3, h4, h5, h6 {
+	font: 700 40px/1.2 Raleway, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	margin: 5px 0 5px;
+	color: #222;
+}
+
+h2 {
+	font-size: 30px;
+	margin: 0 0 30px;
+}
+
+h3 {
+	font-size: 13px;
+	letter-spacing: 1px;
+	margin: 0 0 5px;
+}
+
+h4 {
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+
+h5 {
+	font-size: 12px;
+	letter-spacing: 1px;
+	font-weight: 400;
+}
+
+h6 {
+	font-size: 11px;
+	letter-spacing: 1px;
+	font-weight: 400;
+}
+li{
+    list-style:none;
+}
+/* ------------   预加载  --------------- */
+#preloader {
+	background: #FFF;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 9999;
+}
+#status {
+	background-image: url(../image/preloader.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 200px;
+	left: 50%;
+	margin: -100px 0 0 -100px;
+	position: absolute;
+	top: 50%;
+	width: 200px;
+}
+/* ---------  进入页面 -----------*/
+#home {
+    background: url(cover.gif);
+    background-color: #222;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    padding: 0;
+}
+.home-overlay {
+    background-color: rgba(44, 62, 80, 0.3);
+      background-image: url(../image/pattern.png);
+    background-repeat: repeat;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+.intro {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    -webkit-transform: translate(0%, -50%);
+    -moz-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+    -o-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    padding: 0 15px;
+}
+.start {
+    font-size: 18px;
+    font-style: normal;
+    text-transform: none;
+    margin: 15px 0;
+    color:#fff;
+    letter-spacing:0.35em;
+}
+.intro h1 {
+    font-weight: bold;
+    color:#fff;
+    line-height:2em;
+}
+.scroll-down {
+	position: absolute;
+	left: 50%;
+	bottom: 40px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	margin-left: -15px;
+	display: block;
+	z-index: 10;
+    text-align: center;
+}
+
+.scroll-down span{
+    position: relative;
+    color: #fff;
+    -webkit-animation-name: Jdown;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-delay: 0s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-play-state: running;
+	animation-name: Jdown;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+}
+.scroll-down span > img{
+	width:1.5em;
+	height:1em;
+}
+@-webkit-keyframes Jdown	{
+	0%   { top:0px;  opacity: 0;}
+	30%  { top:10px; opacity: 1;}
+	100% { top:25px; opacity: 0;}
+}
+
+@keyframes Jdown	{
+	0%   { top:0px;  opacity: 0;}
+	30%  { top:10px; opacity: 1;}
+	100% { top:25px; opacity: 0;}
+}
+/* 顶部导航 */
+.header {
+    border-bottom: 1px solid #f5f5f5;
+    position: relative;
+    width: 100%;
+    z-index: 998;
+}
+.navbar-custom, .navbar-custom .dropdown-menu {
+    background: #fff;
+    padding: 0;
+}
+.navbar-custom {
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: Raleway, sans-serif;
+}
+.navbar-custom .navbar-toggle .icon-bar {
+    background: #222;
+}
+.navbar-custom .navbar-brand {
+    font-weight: 700;
+    font-size: 22px;
+    font-family: Lobster, cursive;
+}
+.navbar-custom .navbar-brand > img{
+	width:87px;
+	height:25px;
+	display:inline-block;
+}
+.navbar-custom .nav li.active, .navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus, .navbar-custom .navbar-nav > li.active a {
+    background: none;
+    outline: 0;
+    color: #E7746F;
+}
+.navbar-custom .navbar-brand, .navbar-custom .navbar-nav > li > a, .navbar-custom .navbar-nav .dropdown-menu > li > a {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #222;
+}
+/* 这是我所做的 */
+.pfblock-gray {
+    background: #f5f5f5;
+}
+.pfblock {
+    padding: 120px 0 100px;
+}
+.pfblock-header {
+    text-align: center;
+    margin: 0 0 60px;
+}
+.pfblock-title {
+    font-weight: 800;
+}
+.pfblock-line {
+    background: rgba(135, 135, 135, 0.5);
+    width: 100px;
+    height: 1px;
+    margin: 30px auto;
+}
+.pfblock-subtitle {
+    font-style: normal;
+    font-size: 18px;
+}
+.iconbox {
+    background: #fff;
+    border-bottom: 1px solid #d4d4d4;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0 0 20px;
+}
+.iconbox-icon {
+    margin: 0 0 15px;
+    font-size: 32px;
+    color: #222;
+}
+.iconbox-icon span{
+    display:inline-block;
+    width:32px;
+    height:32px;
+}
+/* 我的作品 */
+.grid {
+    position: relative;
+    clear: both;
+    margin: 0 auto;
+    padding: 1em 0 4em;
+    max-width: 100%;
+    list-style: none;
+    text-align: center;
+}
+
+.grid h2{
+    font-size: 20px;
+}
+
+.grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 17em;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grid figure img {
+    position: relative;
+    display: block;
+    min-height: auto;
+    max-width: 100%;
+    opacity: 0.8;
+    width:100%;
+    height:100%;
+}
+
+.grid figure figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+    pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.grid figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+
+.grid figure h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+}
+
+.grid figure h2 span {
+    font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+    margin: 0;
+}
+
+.grid figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+figure.effect-bubba {
+    background: #9e5406;
+}
+
+figure.effect-bubba img {
+    opacity: 0.7;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+figure.effect-bubba:hover img {
+    opacity: 0.4;
+}
+
+figure.effect-bubba figcaption::before,
+figure.effect-bubba figcaption::after {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-bubba figcaption::before {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+}
+
+figure.effect-bubba figcaption::after {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1,0);
+    transform: scale(1,0);
+}
+
+figure.effect-bubba h2 {
+    padding-top: 10%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,-20px,0);
+    transform: translate3d(0,-20px,0);
+    color: #fff;
+}
+
+figure.effect-bubba p {
+    padding: 20px 2.5em;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+}
+
+figure.effect-bubba:hover figcaption::before,
+figure.effect-bubba:hover figcaption::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+figure.effect-bubba:hover h2,
+figure.effect-bubba:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+/* 返回顶部 */
+.scroll-up {
+    position: fixed;
+    display: none;
+    z-index: 999;
+    bottom: 2em;
+    right: 2em;
+}
+
+.scroll-up a {
+    background-color: rgba(135, 135, 135, 0.5);
+    display: block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.scroll-up a:hover,
+.scroll-up a:active {
+    background-color: rgba(000, 000, 000, .8);
+    color: #e7746f;
+}
+/* 雇佣我 */
+.calltoaction *{
+    text-align: center;
+}
+.calltoaction {
+    background: url(../image/bj.jpg);
+    background-color: #222;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    padding: 50px 0;
+    color: #999;
+}
+.calltoaction h2 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color:#fff;
+}
+.calltoaction-decription{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    color: #fff;
+}
+.calltoaction-btn {
+    text-align: center;
+}
+.calltoaction-btn > .btn {
+    background: rgba(255, 255, 255, .8);
+    color: #111;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.calltoaction-btn > .btn:hover{
+    background: #fff;
+}
+/* demo */
+.J_box{
+    width:89%;
+    height:auto;
+ 
+    position:absolute;
+    background:url(../image/p.jpg) no-repeat center;
+    background-size:cover;
+}
+.title_c{
+    color:#ccc;
+    font-size:1.3em;
+    cursor:pointer;
+}
+.span{
+    display:block;
+    box-sizing:border-box;
+    width:32px;
+    height:30px;
+    background:#ccc;
+    float:left;
+    border-left:1px solid #fff;
+    border-bottom:1px solid #fff;
+}
+/* 动画 */
+s{  
+    /*width:50%;
+    margin:0 auto;
+    line-height:50px;
+    font-size:50px;
+    text-align:center;*/
+    color:#ccc;
+    -webkit-background-clip: text;    /*按文字裁剪*/
+    -webkit-text-fill-color: transparent;    /*文字的颜色使用背景色*/
+    background-color:#19385c;    /*设置一个背景色*/
+    background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.6) 30%, #aff0ff 50%, rgba(0, 0, 0, 0.6) 70%);        /*设置渐变的背景，按对角线渐变*/
+    background-blend-mode: hard-light;    /*设置背景为混合模式下的强光模式*/
+    background-size: 200%;
+    -webkit-animation: shine 2.5s infinite;    /*给背景添加动画改变位置*/
+}
+@-webkit-keyframes shine {
+
+    from {background-position: 100%;}
+
+    to {background-position: 0;}
+
+}
+/* demo2 */
+#box{
+    width:auto;
+    height:auto;
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    margin:0 auto;
+}
+#box>span{
+    position:absolute;
+    transition:0.8s;
+    display:block;
+}
+#box>img{
+    width:100%;
+    height:100%;
+}
+
+
+/* footer */
+#footer {
+    background: #222;
+    text-align: center;
+    padding: 40px 0;
+    color: #FFF;
+}
+
+.copyright {
+    margin: 0;
+}
+
+.copyright a{
+    border-bottom: 1px dotted #fff;
+}
+
+#footer span{
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    color: #ff5252;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 5px;
+}
+
+.social-links a {
+    width: 36px;
+    height: 36px;
+    display: block;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, .1);
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, .2);
+}
+
+.social-links a:hover {
+    border: 1px solid rgba(255, 255, 255, .5);
+    color: rgba(255, 255, 255, .8);
+}
+.call{
+    font-size:16px;
+}
+/* 小球 */
+#div{
+    width:100%;
+    height:250px;
+    position:absolute;
+}
+.ov{
+    display:block;
+    width:20%;
+    height:50px;
+    float:left;
+    text-align:center;
+    line-height:50px;
+    color:#fff;
+    font-size:20px;
+}
